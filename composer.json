@@ -1,0 +1,20 @@
+{
+    "name": "deyan.parvanov/deyan.parvanov",
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+      "ext-mysqli": "*"
+    },
+
+    "autoload": {
+        "classmap": [
+            "classes"
+        ]
+    },
+
+    "authors": [
+        {
+            "name": "Deyan Parvanov",
+            "email": "deyan.parvanov@gmail.com"
+        }
+    ]
+}
