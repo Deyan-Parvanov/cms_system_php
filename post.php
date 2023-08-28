@@ -1,6 +1,8 @@
 <?php global $connection;
 include "includes/header.php"?>
 
+<!-- POST DETAILS + COMMENTS -->
+
 <!-- Navigation -->
 <?php include "includes/navigation.php"?>
 

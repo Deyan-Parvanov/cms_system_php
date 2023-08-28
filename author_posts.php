@@ -1,6 +1,8 @@
 <?php global $connection;
 include "includes/header.php"?>
 
+<!-- ALL POSTS BY AUTHOR - redirected from index.php -->
+
 <!-- Navigation -->
 <?php include "includes/navigation.php"?>
 
@@ -33,8 +35,8 @@ include "includes/header.php"?>
             ?>
 
                 <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    All Posts By
+                    <small><?php echo $post_author ?></small>
                 </h1>
 
                 <!-- First Blog Post -->
@@ -59,7 +61,6 @@ include "includes/header.php"?>
                 if(isset($_POST['create_comment'])) {
 
                     $the_post_id = $_GET['p_id']; //That goes into the url
-
                     $comment_author = $_POST['comment_author'];
                     $comment_email = $_POST['comment_email'];
                     $comment_content = $_POST['comment_content'];

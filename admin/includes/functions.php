@@ -161,29 +161,37 @@ users_online();
 
 //===== CATEGORIES =====//
 
-function insert_categories () {
+function insert_categories(): void {
     global $connection;
 
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['add_category'])) {
         $cat_title = $_POST['cat_title'];
 
         if ($cat_title == "" || empty($cat_title)) {
             echo "This field should not be empty!";
         } else {
-            $query = "INSERT INTO categories(cat_title) ";
-            $query .= "VALUE('{$cat_title}') ";
+//            $query = "INSERT INTO categories(cat_title) ";
+//            $query .= "VALUE('{$cat_title}') ";
+//
+//            $create_category_query = mysqli_query($connection, $query);
+            $stmt = mysqli_prepare($connection, "INSERT INTO categories(cat_title) VALUES(?) ");
 
-            $create_category_query = mysqli_query($connection, $query);
+            mysqli_stmt_bind_param($stmt, 's', $cat_title);
 
-            if (!$create_category_query) {
+            mysqli_stmt_execute($stmt);
+
+            if (!$stmt) {
                 die("QUERY FAILED" . mysqli_error($connection));
             }
         }
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "<h1></h1>";
     }
 }
 
 
-function findAllCategories () {
+function findAllCategories(): void {
     global $connection;
 
     $query = "SELECT * FROM categories";
@@ -202,7 +210,7 @@ function findAllCategories () {
 }
 
 
-function deleteCategories () {
+function deleteCategories(): void {
     global $connection;
 
     if(isset($_GET['delete'])) {

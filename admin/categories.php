@@ -20,7 +20,7 @@
 
                     <div class="col-xs-6"
 
-                        <?php  insert_categories(); ?>
+                        <?php insert_categories(); ?>
 
                         <form action="" method="post">
                             <div class="form-group">
@@ -28,7 +28,7 @@
                                 <input type="text" class="form-control" name="cat_title">
                             </div>
                             <div class="form-group">
-                                <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
+                                <input class="btn btn-primary" type="submit" name="add_category" value="Add Category">
                             </div>
                         </form>
 

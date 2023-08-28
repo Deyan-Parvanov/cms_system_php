@@ -1,6 +1,5 @@
 <?php global $connection;
 include "db.php" ?>
-<?php //include "admin/includes/functions.php" ?>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">

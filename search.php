@@ -71,13 +71,13 @@ include "includes/db.php" ?>
             ?>
 
                         <h1 class="page-header">
-                            Page Heading
-                            <small>Secondary Text</small>
+                            <?php echo $post_title ?>
+                            <small>Search Results</small>
                         </h1>
 
                         <!-- First Blog Post -->
                         <h2>
-                            <a href="#"><?php echo $post_title ?></a>
+                            <a href="post.php?p_i=<?php echo $post_id ?>"><?php echo $post_title ?></a>
                         </h2>
                         <p class="lead">
                             by <a href="index.php"><?php echo $post_author ?></a>

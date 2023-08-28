@@ -1,6 +1,8 @@
 <?php global $connection;
 include "includes/header.php"?>
 
+<!-- POSTS BY CATEGORY -->
+
     <!-- Navigation -->
 <?php include "includes/navigation.php"?>
 
@@ -41,8 +43,8 @@ include "includes/header.php"?>
                 ?>
 
                         <h1 class="page-header">
-                            Page Heading
-                            <small>Secondary Text</small>
+                            <?php echo $post_title ?>
+                            <small>category</small>
                         </h1>
 
                         <!-- First Blog Post -->

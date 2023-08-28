@@ -18,14 +18,13 @@ include "includes/db.php"; ?>
         ];
 
         if (strlen($username) < 4) {
-            $error['username'] = "Username needs to be longer thant 4 symbols.";
+            $error['username'] = "Username needs to be longer than 4 symbols.";
         }
 
         if ($username == '') {
             $error['username'] = "Username cannot be empty.";
         }
 
-        // does not work - check it in functions.php
         if (username_exists($username)) {
             $error['username'] = "Username already exists.";
         }
@@ -34,7 +33,6 @@ include "includes/db.php"; ?>
             $error['email'] = "Email cannot be empty.";
         }
 
-        // does not work - check it in functions.php
         if (email_exists($email)) {
             $error['email'] = "Email already exists, <a href='index.php'>Please login</a>";
         }
